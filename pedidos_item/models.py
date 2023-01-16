@@ -7,8 +7,8 @@ class Itempedidos(models.Model):
     codpedido = models.ForeignKey(Pedidos_model,blank=True, on_delete=models.CASCADE)
     codproduto = models.TextField(max_length=10, default=None)
     itemvalor = models.FloatField( null=True,blank=True)
-    itemquantidade= models.IntegerField(blank=True)
-    numseq= models.IntegerField(blank=True)
+    itemquantidade= models.IntegerField(null=True,blank=True)
+    numseq= models.IntegerField(null=True,blank=True)
     date = models.DateTimeField(auto_now=True)
     status = models.TextField(max_length=1, default=None)
 
