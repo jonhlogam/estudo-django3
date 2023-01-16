@@ -91,14 +91,8 @@ WSGI_APPLICATION = 'api_fc.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        #'NAME': 'db_fcd',
-            'NAME': 'fc_api',
-        'USER': 'postgres',
-        'PASSWORD':'Rjbs@2k12',
-        #'PASSWORD':'Rjbs2k12',
-        'HOST':'localhost'
-       # 'HOST':'fcd.ckcs457r2phu.us-east-1.rds.amazonaws.com'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
