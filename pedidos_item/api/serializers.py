@@ -6,7 +6,7 @@ class Item_pedidos_Serializer (serializers.ModelSerializer):
     class Meta:
         model = Itempedidos
         fields= [
-            'id',
+        'id_item',
         'codpedido',
         'codproduto',
         'itemvalor',

@@ -3,7 +3,7 @@ from pedidos.models import Pedidos_model
 
 
 class Itempedidos(models.Model):
-
+    id_item=models.TextField(primary_key=True,auto_created=True)
     codpedido = models.ForeignKey(Pedidos_model,blank=True, on_delete=models.CASCADE)
     codproduto = models.TextField(max_length=10, default=None)
     itemvalor = models.FloatField( null=True,blank=True)
@@ -13,7 +13,7 @@ class Itempedidos(models.Model):
     status = models.TextField(max_length=1, default=None)
 
     def __str__(self):
-        return self.codpedido
+        return self.id_item
 
 
 from django.db import models
